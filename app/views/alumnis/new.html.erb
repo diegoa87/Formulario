@@ -1,0 +1,28 @@
+<div class="well">
+<div class="row">
+ <div class="col-md-4 col-md-offset-2">
+	<h1>Deja tu testimonio</h1>
+	<hr>
+	<%= simple_form_for @alumni do |f| %>
+	<%= f.error_notification %>
+	<%= f.full_error :image_file_size, class: "alert alert-error" %>
+	<%= f.full_error :image_content_type, class: "alert alert-error" %>
+
+	<%= f.input :firstname, label: 'Nombre' %>
+	<%= f.input :lastname, label: 'Apellido'%>
+	<%= f.input :description, label: 'Testimonio (Máximo 144 caracteres)', as: :text, input_html: { rows: "3", maxlength: 144  } %>
+	<%= f.input :image, label: "Sube una foto tuya" %>
+	<%= f.input :image2, label: "Sube logo" %>
+	<br>
+
+	<%= f.button :submit, class: "btn btn-primary" %>
+	<% end %>
+</div>
+ <div class="col-md-5 col-md-offset-1">
+ <img src="http://bombacamp.com/communities/4/004/010/223/144//images/4597220339_254x112.jpg">
+
+ <h2> Luego de enviar información, guarda la imagen de acá abajo y ponla en tu firma de email para vean tu sello certificado de BombaCamp"</h2>
+
+ <img src="http://images.quebarato.co.cr/T160x160/la+mujer+que+un+hombre+de+verdad+desea+an+iacute+mate+y+te+dejare+hacer+lo+que+quieras+central+san+jose+san+jose+costa+rica__78D807_1.jpg">
+</div>
+</div>
